@@ -6,6 +6,14 @@
 
     <div id="main-container">
       <h2>Todos</h2>
+      <!--
+        Sugerencia:
+        Los componentes TodoAdd y Todos deberían formar parte de un mismo componente
+        ya que en ambos se maneja la lógica de agregar o quitar las tareas.
+
+        Si vamos al caso es el mismo estado el que está siendo modificado en 2 componentes distintos.
+      -->
+      
       <TodoAdd @addTodo="addTodo" />
       <Todos :todoslist="copyTodos" @delete-todo="deleteTodo" />
     </div>
@@ -34,7 +42,13 @@ export default {
       this.todos.push(todo);
       this.copyTodos = [...this.todos];
     },
-    querySearch(query) {
+
+    /**
+     * Deberías normalizar el texto y pasarlo a toLowerCase para que la búsqueda
+     * no se rompa con asteriscos o con la diferencia entre mayúsculas y minúsculas.
+     */
+
+    querySearch(query) { 
       if (query.trim() === "") {
         this.copyTodos = [...this.todos];
       } else {

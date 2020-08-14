@@ -1,3 +1,12 @@
+<!-- 
+Este componente no debería estar acá Jajajajajaja
+A todos nos pasa, pero es considerado una buena práctica
+eliminar todos los bloques de código muerto.
+
+O mejor dicho, es considerado un antipatrón dejar código
+muerto en nuestra solución. 
+-->
+
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>

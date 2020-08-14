@@ -1,3 +1,11 @@
+<!--
+Pudiste evitar el method checkTodo y la validación en el :checked utilizando
+v-model, eso directamente hace el 2-way-binding entre el checkbox y tu componente
+padre facilitandote el toggle del estado
+
+Podés leer más de esto en la docu de Vue o consultarnos por el Discord si tenés dudas
+-->
+
 <template>
   <div class="todo">
     <div class="todo-body" :class="{ completed: todo.completed }">

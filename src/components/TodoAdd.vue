@@ -1,5 +1,10 @@
 <template>
   <div id="add-container">
+    <!--
+      (1)
+      Sugerencia: <form @submit.prevent="addTodo">
+      Con esa directiva puedes prevenir default del submit
+    -->
     <form @submit="addTodo">
       <input type="text" v-model="title" />
     </form>
@@ -17,14 +22,14 @@ export default {
   },
   methods: {
     addTodo(e) {
-      e.preventDefault();
-      const newTodo = {
-        id: uuid.v4(),
+      e.preventDefault(); // Si implementas (1) no debería ser necesario esta instrucción
+      const newTodo = { 
+        id: uuid.v4(), // ¡Muy buena idea! Aunque cuando apliques persistencia será mejor que los ID te los genere el Back-end. :)
         title: this.title,
         completed: false,
       };
       this.title = "";
-
+      
       this.$emit("addTodo", newTodo);
     },
   },

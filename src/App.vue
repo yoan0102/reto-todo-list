@@ -21,7 +21,6 @@
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
 import Search from "./components/Search";
 import Todos from "./components/Todos";
 import TodoAdd from "./components/TodoAdd";

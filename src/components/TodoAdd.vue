@@ -2,6 +2,7 @@
   <div id="add-container">
     <form @submit.prevent="addTodo">
       <input type="text" v-model="title" />
+      <input type="submit" value="Agregar" class="btn btn-success rounded-pill my-4" />
     </form>
   </div>
 </template>
@@ -41,4 +42,6 @@ input {
   border: solid 1px #ccc;
   width: 100%;
 }
+
+
 </style>

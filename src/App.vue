@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="header">
+    <div class="container-fluid bg-dark py-5 text-center">
       <Search @query-change="querySearch" />
     </div>
 

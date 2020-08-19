@@ -17,7 +17,7 @@ Podés leer más de esto en la docu de Vue o consultarnos por el Discord si ten�
       {{ todo.title }}
     </div>
     <div class="todo-actions">
-      <button @click="$emit('delete-todo', todo.id)">Eliminar</button>
+      <button @click="$emit('delete-todo', todo.id)" class="btn btn-danger">Eliminar</button>
     </div>
   </div>
 </template>

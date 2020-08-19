@@ -5,7 +5,7 @@
         <Search @query-change="querySearch" />
      </div>
     </div>
-    <div id="main-container">
+    <div class="container my-5 px-5">
       <h2 class="text-center">Todos</h2>
       <Todos :todoslist="copyTodos" @delete-todo="deleteTodo" @addTodo="addTodo" />
     </div>
@@ -84,28 +84,5 @@ export default {
 </script>
 
 <style>
-* {
-  box-sizing: border-box;
-}
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.5em;
-  padding: 0;
-  margin: 0;
-}
-
-#main-container {
-  border: 1px solid #ccc;
-  width: 600px;
-  margin: 100px auto;
-}
-
-#header {
-  background: black;
-  padding: 10px;
-}
-
-h2 {
-  padding: 0 10px;
-}</style>
+</style>

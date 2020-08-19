@@ -32,16 +32,7 @@ export default {
 </script>
 
 <style scoped>
-#add-container {
-  padding: 10px;
-}
 
-input {
-  padding: 10px;
-  outline: none;
-  border: solid 1px #ccc;
-  width: 100%;
-}
 
 
 </style>

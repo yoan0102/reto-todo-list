@@ -1,12 +1,13 @@
 <template>
   <div id="app">
-    <div class="container-fluid bg-dark py-5 text-center">
-      <Search @query-change="querySearch" />
+    <div class="container-fluid bg-dark p-5 text-center">
+     <div class="row">
+        <Search @query-change="querySearch" />
+     </div>
     </div>
     <div id="main-container">
-      <h2>Todos</h2>
-      <TodoAdd @addTodo="addTodo" />
-      <Todos :todoslist="copyTodos" @delete-todo="deleteTodo" />
+      <h2 class="text-center">Todos</h2>
+      <Todos :todoslist="copyTodos" @delete-todo="deleteTodo" @addTodo="addTodo" />
     </div>
   </div>
 </template>
@@ -14,14 +15,12 @@
 <script>
 import Search from "./Search";
 import Todos from "./Todos";
-import TodoAdd from "./TodoAdd";
 
 export default {
   name: 'TodosView',
   components: {
     Search,
     Todos,
-    TodoAdd,
   },
   methods: {
     deleteTodo(id) {
